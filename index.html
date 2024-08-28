@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy WebTV</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .sidebar .nav-link {
+            font-size: 16px;
+        }
+        .sidebar .nav-link.active {
+            background-color: #ccc;
+            color: white;
+        }
+        .sidebar .nav-item {
+            margin-bottom: 10px;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .header {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .marquee {
+            color: #0b0bee;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 95vh; /* Adjust height as needed */
+        }
+        .hidden {
+            display: none;
+        }
+        a
+        {
+            text-transform: uppercase;
+            text-decoration:none;
+        }
+</style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="header">
+            <h5>Happy Communication Web TV</h5>
+        </div>
+        <div class="nav flex-column">
+            <div class="nav-item">
+                <a class="nav-link btn btn-primary" href="#" onclick="showSection('telugu-news')">Telugu News</a>
+                <div id="telugu-news" class="nav flex-column hidden">
+                      
+                    <a class="nav-link"><img src="ch logo/abn.png" width='50px' height='30px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/HoYsWagMFfE', this)">ABN Tv</a>      
+                    <a class="nav-link"><img src="ch logo/tv5.png" width='50px' height='30px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/ho9JlBnrGWg', this)">TV 5</a>
+                    <a class="nav-link"><img src="ch logo/sakshi.png" width='50px' height='30px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/8McTsOqeueE', this)">sakshi tv</a>
+					<a class="nav-link"><img src="ch logo/hm.png" width='50px' height='30px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/3JodH4xoqJs', this)">HMTV</a>
+                    <a class="nav-link"><img src="ch logo/etvn.png" width='50px' height='40px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/KvZIEgHfscU', this)">ETV NEWS</a>
+                    <a class="nav-link"><img src="ch logo/10tv.png" width='40px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.youtube.com/embed/byG7EGw9NPs', this)">10 TV</a>
+                    <a class="nav-link"><img src="ch logo/v6.png" width='50px' height='40px'><class="nav-linl" href="#" onclick="playVideo('https://www.youtube.com/embed/_xtceKvlVYQ', this)">V6 TV</a>
+                    <a class="nav-link"><img src="ch logo/prime9.png" width='40px' height='50px'><class="nav-linl" href="#" onclick="playVideo('https://www.youtube.com/embed/4PpS_RGUzfQ', this)">PRIME 9</a>
+                    <a class="nav-link"><img src="ch logo/tv9.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9telcmjhcs/liveabr/playlist.m3u8', this)">TV 9</a>
+					<a class="nav-link"><img src="ch logo/ntv.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://yuppmedtaorire.akamaized.net/v1/manifest/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/ntv_nim_https/48978386-9847-44f4-85db-5e9f0cb73afa/1.m3u8', this)">ntv</a>
+					
+                    <!-- Add other Telugu News links here -->
+                </div>
+            </div>
+            
+            <div class="nav-item">
+                <a class="nav-link  btn btn-primary" href="#" onclick="showSection('tamil-news')">Tamil News</a>
+                <div id="tamil-news" class="nav flex-column hidden">
+                    <a class="nav-link"><img src="ch logo/sunn.png" width='50px' height='50px'><class="nav-linl"  href="#" onclick="playVideo('https://www.youtube.com/embed/9M02G5c6x6w', this)">SUN NEWS</a>
+                    <a class="nav-link"><img src="ch logo/Thanthi.png" width='50px' height='50px'><class="nav-linl"  href="#" onclick="playVideo('https://www.youtube.com/embed/j1nzTy5q_1Y', this)">ThanthiTV</a>
+                    <a class="nav-link"><img src="ch logo/Puthiyathalaimurai.png" width='50px' height='30px'><class="nav-linl"  href="#" onclick="playVideo('https://www.youtube.com/embed/RUzgphgBRzI', this)">Puthiyathalai</a>
+                    <a class="nav-link"><img src="ch logo/Sathiyam.png" width='50px' height='40px'><class="nav-linl"  href="#" onclick="playVideo('https://www.youtube.com/embed/uhPfsZW2R6I', this)">Sathiyam News</a>
+					<a class="nav-link"><img src="ch logo/Polimer.png" width='50px' height='50px'><class="nav-linl"  href="#" onclick="playVideo('https://www.youtube.com/embed/8pH_ZH_wGiQ', this)">Polimer News</a>
+					<a class="nav-link"><img src="ch logo/kalaignar.png" width='50px' height='50px'><class="nav-linl"  href="#" onclick="playVideo('https://www.youtube.com/embed/yxVo5zANRZw', this)">Kalaignar News </a>
+                    <!-- Add other Tamil News links here -->
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link  btn btn-primary" href="#" onclick="showSection('local-tt')">Local T&T</a>
+                <div id="local-tt" class="nav flex-column hidden">
+                <a class="nav-link"><img src="ch logo/sr.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://vvsolutions-server10.in/hls/sr_113.m3u8', this)">srtv</a>
+                <a class="nav-link"><img src="ch logo/sri.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://vvsolution.in/hls/sirichannel_621.m3u8', this)">SIRI TV</a>
+                <a class="nav-link"><img src="ch logo/pcn.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://amigofx.com:1936/pcnhd/pcnhd/playlist.m3u8', this)">PCN TV</a>
+                <a class="nav-link"><img src="ch logo/rk.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://vvsolutions.in/rktv_347/rktv_347.m3u8', this)">RK TV</a>
+                <a class="nav-link"><img src="ch logo/vm.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://billing.tfms.xyz/http://allchannels.in:80/live/vvmovies_100/tracks-v1a1/mono.m3u8', this)">V TV</a>
+                <a class="nav-link"><img src="ch logo/you.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://worker-snowy-star-d9d6.1doi3.workers.dev/http://allchannels.in/vv/video.m3u8', this)">Your TV</a>
+                <a class="nav-link"><img src="ch logo/vmm.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://billing.tfms.xyz/http://allchannels.in:80/live/vvmusic_100/tracks-v1a1/mono.m3u8', this)">V Music</a>
+                <a class="nav-link"><img src="ch logo/vino.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://vvsolution.in/hls/vinodamtv_626.m3u8', this)">Vinodam tv</a>             
+                <a class="nav-link"><img src="ch logo/bcn.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://vvsolution.in/hls/bcntv_633.m3u8', this)">BCN tv</a>
+                <a class="nav-link"><img src="ch logo/tail3 copy.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/playlist.m3u8', this)">Tamil3 tv</a>
+                    <!-- Add other Local T&T links here -->
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link  btn btn-primary" href="#" onclick="showSection('tamil')">Tamil</a>
+                <div id="tamil" class="nav flex-column hidden">
+                    <a class="nav-link"><img src="ch logo/makkal.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8', this)">makkal tv</a>
+                    <a class="nav-link"><img src="ch logo/mn.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://mntv.livebox.co.in/mntvhls/live.m3u8', this)">mn tv</a>
+                    <a class="nav-link"><img src="ch logo/vaana.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/chunks.m3u8', this)">vaanavil tv</a>
+                    <a class="nav-link"><img src="ch logo/music.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://mntv.livebox.co.in/musichls/live.m3u8', this)">m musichls</a>
+                    <a class="nav-link"><img src="ch logo/moon.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://anym3u8player.com/tv/p.php?url=https://hello-world-steep-fog-a4de.1doi3.workers.dev/http://player.mslivestream.net/mslive/e10bb900976df9177b9a080314f26f86.sdp/chunks.m3u8', this)">moon tv</a>
+                    <a class="nav-link"><img src="ch logo/ZEE THIRAI.png" width='50px' height='50px'><class="nav-linl" href="#" onclick="playVideo('https://www.zee5.com/b2b-live-tv/0-9-224', this)">ZEE THIRAI</a>
+					<a class="nav-link"><img src="ch logo/zee tamil hd.png" width='50px' height='50px'><class="nav-linl" href="#" onclick="playVideo('https://www.zee5.com/b2b-live-tv/0-9-zeetamil',this)"target='_blank'>Zee Tamil HD</a>
+                    <a class="nav-link"><img src="ch logo/zee tamil.png" width='50px' height='50px'><class="nav-linl"href="https://www.zee5.com/b2b-live-tv/0-9-9z5383487">Zee Tamil</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link  btn btn-primary" href="#" onclick="showSection('telugu')">Telugu</a>
+                <div id="telugu" class="nav flex-column hidden">
+                    <a class="nav-link"><img src="ch logo/svbc.png" width='50px' height='30px'><class="nav-linl" href="#" onclick="playVideo('https://www.hlsplayer.net/embed?type=m3u8&src=https://player.mslivestream.net/telugu/5d076e5c3d34cb8bb08e54a4bb7e223e.sdp/playlist.m3u8', this)">SVBC</a>
+                    <a class="nav-link"><img src="ch logo/Srisaila.png" width='50px' height='30px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/iaYu4f3WoA0', this)">Srisaila Tv</a>
+                    <a class="nav-link"><img src="ch logo/sai.png" width='50px' height='30px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/dg2brCyaXk8', this)">SAI TV</a>
+                    <a class="nav-link"><img src="ch logo/Bhakthi.png" width='50px' height='30px'><class="nav-link" href="#" onclick="playVideo('https://www.youtube.com/embed/d0dB3kSCMmM', this)">bhakti</a>
+                    <a class="nav-link" href="https://www.ottplay.com/live-tv/etv-plus/b82ff6a41a113" target='_blank'>ETV Plus</a>
+					<a class="nav-link" href="https://www.ottplay.com/live-tv/etv-telugu/e72478a22187" target='_blank'>ETV Telugu</a>
+                    <a class="nav-link" href="https://www.ottplay.com/live-tv/etv-cinema/72478c1f17263"target='_blank'>ETV Cinema</a>
+                    <a class="nav-link" href="https://www.ottplay.com/live-tv/etv-life-spiritual-2015/71bc895bac485"target='_blank'>ETV LIFE Spiritual</a>
+                    <a class="nav-link" href="https://www.ottplay.com/live-tv/etv-abhiruchi/35ef789bfc400"target='_blank'>ETV Abhiruchi</a>
+                    <a class="nav-link" href="https://www.zee5.com/b2b-live-tv/0-9-zeetelugu" target='_blank'>Zee Telugu HD</a>
+                    <a class="nav-link" href="https://www.zee5.com/b2b-live-tv/0-9-zeecinemahd" target='_blank'>Zee Cinema HD</a>
+                    <a class="nav-link" href="https://www.zee5.com/b2b-live-tv/0-9-zeecinemalu" target='_blank'>Zee Cinemalu HD</a>
+					
+                    <!-- Add other Telugu links here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <marquee class="marquee mt-2">Welcome to Happy Web TV..... Cell-9885080329, 6304712580</marquee>
+        <!-- Video Section -->
+        <div class="video-container">
+            <iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+ 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function playVideo(videoUrl, linkElement, id) {
+            const iframe = document.getElementById('videoFrame');
+            iframe.src = id === '1' ? videoUrl + '?autoplay=1&mute=1' : videoUrl + '?autoplay=1';
+
+            // Remove active class from all links
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => link.classList.remove('active'));
+
+            // Add active class to the clicked link
+            linkElement.classList.add('active');
+        }
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.nav .nav-item .nav').forEach(section => section.classList.add('hidden'));
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        window.onload = function() {
+            // Automatically play the first video (ABN TV) when the page loads
+            const firstLink = document.querySelector('#telugu-news a');
+            playVideo('https://www.youtube.com/embed/HoYsWagMFfE', firstLink, '1');
+            
+            // Initialize the first section
+            showSection('telugu-news');
+        }
+    </script>
+</body>
+</html>
